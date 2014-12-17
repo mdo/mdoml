@@ -39,10 +39,18 @@ p {
   margin-bottom: 1rem;
 }
 
-p > a {
-  color: rgba(0,0,255,.75);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0,0,255,.25);
+p,
+li {
+  > a {
+    color: rgba(0,0,255,.75);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,255,.25);
+
+    &:hover,
+    &:focus {
+      border-bottom-color: rgba(0,0,255,.75);
+    }
+  }
 }
 
 h1 + p {

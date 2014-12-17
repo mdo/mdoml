@@ -107,6 +107,7 @@ column[cols="10"] {
  */
 
 alert {
+  position: relative;
   display: block;
   padding: 1rem;
   margin: 1rem 0;
@@ -130,6 +131,10 @@ alert[is="warning"] {
 
 alert[is="danger"] {
   background-color: rgba(255,0,0,.15);
+}
+
+alert[is="dismissable"] {
+  padding-right: 2rem;
 }
 
 

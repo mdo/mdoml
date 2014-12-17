@@ -4,49 +4,28 @@ layout: default
 
 # mdoml
 
-What if you could augment HTML5's current set of elements with your own? Well, as it turns out, you can.
+What if you could augment HTML5's current set of elements with your own? Well, as it turns out, you can. **mdoml** is an experiment in creating custom HTML elements based on today's most common interface design components.
 
-**mdoml**, or mdo markup language, is an experiment to augment HTML5's language with additional custom elements from some of interface design's most common patterns. It attempts to answer the question, *What if could HTML as a language look like if it had support for our most beloved components?*
+Is this a bad idea? Maybe, but that depends on how you look at it. Sure, it doesn't validate, but it does create a more approachable compontentized design system. No more rules around writing classes a certain way—just create the components.
 
+Learn more, suggest changes, or report bugs via [the GitHub repo](https://github.com/mdo/mdoml).
 
-Create common design components with custom HTML elements instead of the (stereo)typical `<div>`-itis we often run into.
-
-Built by [@mdo](https://twitter.com/mdo). Learn more, suggest changes, or report bugs via [the GitHub repo](https://github.com/mdo/custom-elements).
-
-## Premise
-
-Instead of reinventing the same design components again, let's use custom HTML elements with a bit of CSS to create an extended HTML design language. Put another way, let's augment the lack of element breadth in the HTML language.
-
-More specifically, there are questions I want to explore the answers to:
-
-* What kind of elements would we need to build?
-* Does this simplify the overall HTML or CSS?
-* Does team communication and productivity improve with this element-based system vs classes?
-* What could these common components be if they were natively supported?
-
-This might not be as practical as a more mature, well-thought out system, but I wanted to experiment the idea anyway.
+---
 
 ## Things to know
 
 * This isn't about Web Components. This is specifically about writing non-compliant, custom HTML tags as a shorthand.
-* This is for all modern browsers, and IE9+. **IE8 and below need help initializing custom HTML elements.** Consider using the HTML shim.
+* This is for all modern browsers, and IE9+. **IE8 and below need help initializing custom HTML elements.** [Consider using the HTML5 shiv.](https://github.com/aFarkas/html5shiv)
 * By design, custom HTML elements have no assumed semantics. For example, you gain obvious browser-backed advantages by using a `<form>` over a `<custom-form>` element. **Don't replace semantic elements.**
 * Because of that lack of browser-assumed semantics, theoretically there's no disadvantage with custom elements for many components. Instead of a `<div>` for dropdowns, `<dropdown>`s could be used with no discernable impact to accessibility.
 * **Custom elements are inline by default.** If you need a block-level element, you'll need to specify that in the CSS.
-
----
-
-## Potential concerns
-
-* Accessibility wise, where do we need the ARIA roles? Likely in all the same places as a `<div>`-based approach.
-* Does this perform well (enough?) in CSS benchmarks?
-* What about future HTML spec name collisions?
+* Accessibility-wise, you'll still need to include ARIA roles where appropriate. I've attempted to do so in a few of the examples below.
 
 ---
 
 ## Form groups
 
-Uses a custom `<formgroup>` element to contain, position, and align checkboxes and radios.
+The custom `<formgroup>` element automatically aligns immediate `<label>`s and their `<input>`s to create hanging checkboxes or radios. Text wrapping, stacking of inputs (without adding `display: block`), and alignment comes automatically.
 
 <formgroup>
   <label for="radio1">
@@ -102,7 +81,7 @@ Uses a custom `<formgroup>` element to contain, position, and align checkboxes a
 
 Uses custom `<row>`s and `<column>`s to create a basic grid layout. Columns are then sized with a `cols` attribute.
 
-Note that not all possible column combinations are used here. I've purposely avoided adding 1, 5, 7, and 11 as they seem rather uncommon.
+*Note that not all possible column combinations are used here. I've purposely avoided adding 1, 5, 7, and 11 as they seem rather uncommon.*
 
 <row>
   <column cols="2">2</column>
@@ -158,7 +137,7 @@ Note that not all possible column combinations are used here. I've purposely avo
 
 ## Alerts
 
-Contextual messages for warnings, errors, status confirmation, and the like.
+Use custom `<alert>`s as messages for warnings, errors, status confirmation, and the like.
 
 <alert>
   <p>This is an alert with some text in it.</p>
@@ -187,7 +166,7 @@ Contextual messages for warnings, errors, status confirmation, and the like.
 
 ## Dropdowns
 
-Contextual menus for buttons and more. Built with a custom `<dropdown>` element and several `<button>` elements as the dropdown actions.
+Contextual menus for buttons and more. Built with a custom `<dropdown>` element and several `<button>` elements as the dropdown actions. Using `<button>`s gives us incredibly ease of use for disabled, hover, and active states.
 
 <div>
 <button type="button" id="dropdown-toggle" active>
@@ -223,7 +202,7 @@ Contextual menus for buttons and more. Built with a custom `<dropdown>` element 
 
 ## Combo buttons
 
-Attach multiple buttons together when their actions relate to one another.
+Use a custom `<combo-button>` to tether a series of related buttons. This relies on us resetting nearly all the default `<button>` styles, but the controls afforded via disabled, hover, and active states is quite compelling—and easy to style.
 
 <combo-button role="group" aria-label="Combo button">
   <button type="button">Button</button>
@@ -255,7 +234,7 @@ Attach multiple buttons together when their actions relate to one another.
 
 ## Breadcrumb
 
-Show the current path to a particular page with breadcrumb navigation.
+Use the custom `<breadcrumb>` element to show the current path to a particular page. Structurally, it's quite familiar to `<nav>` elements. Theoretically, it's contents could be generated based on the page's URL structure or something similar.
 
 <breadcrumb>
   <a href="#">Home</a>
@@ -276,5 +255,8 @@ Show the current path to a particular page with breadcrumb navigation.
 ---
 
 ## Does it work?
-Yes, but beyond that I'm not sure, but I'm super intrigued.
+
+Yes, but beyond that I'm not sure where to take something like this. I'm super intrigued and I could totally see myself building things this way in the future. Something about it feels right. Performance is probably a concern though, at least compared to a pure class-driven system (e.g., `.dropdown` over `<dropdown>`).
+
+My ultimate goal for things like this—and popular front-end frameworks—is that these kind of ideas could influence the future changes to the HTML and CSS specs.
 
