@@ -1,0 +1,13 @@
+# Dependencies
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  auto_ids: true
+
+permalink: pretty
+source: docs
+baseurl: /custom-elements
+
+github:
+  repo: https://github.com/mdo/custom-elements
