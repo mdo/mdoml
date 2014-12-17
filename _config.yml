@@ -1,6 +1,6 @@
 # Dependencies
 markdown: kramdown
-highlighter: rouge
+highlighter: pygments
 
 kramdown:
   auto_ids: true
