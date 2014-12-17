@@ -200,9 +200,10 @@ dropdown {
   max-width: 14rem;
   padding-top: .25rem;
   padding-bottom: .25rem;
-  border: .0625rem solid rgba(0,0,0,.15);
+  margin-top: .25rem;
+  border: .0625rem solid rgba(0,0,0,.2);
   border-radius: .25rem;
-  box-shadow: 0 .375rem .75rem rgba(0,0,0,.15);
+  box-shadow: 0 .15rem .5rem rgba(0,0,0,.1);
 }
 
 dropdown > button {

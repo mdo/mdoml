@@ -45,40 +45,48 @@ Uses a custom `<formgroup>` element to contain, position, and align checkboxes a
 
 <formgroup>
   <label for="radio1">
-    <input type="radio" id="radio1" name="radios" checked> Radio input
+    <input type="radio" id="radio1" name="radios" checked>
+    Radio input
   </label>
   <label for="radio2">
-    <input type="radio" id="radio2" name="radios"> Another radio input
+    <input type="radio" id="radio2" name="radios">
+    Another radio input
   </label>
 </formgroup>
 
 {% highlight html %}
 <formgroup>
   <label for="radio1">
-    <input type="radio" id="radio1" name="radios" checked> Radio input
+    <input type="radio" id="radio1" name="radios" checked>
+    Radio input
   </label>
   <label for="radio2">
-    <input type="radio" id="radio2" name="radios"> Another radio input
+    <input type="radio" id="radio2" name="radios">
+    Another radio input
   </label>
 </formgroup>
 {% endhighlight %}
 
 <formgroup>
   <label for="checkbox1">
-    <input type="checkbox" id="checkbox1" checked> Checkbox input
+    <input type="checkbox" id="checkbox1" checked>
+    Checkbox input
   </label>
   <label for="checkbox2">
-    <input type="checkbox" id="checkbox2"> Checkbox input with a super long string of text that can wrap to a second line to show the hanging input.
+    <input type="checkbox" id="checkbox2">
+    Checkbox input with a super long string of text that can wrap to a second line to show the hanging input.
   </label>
 </formgroup>
 
 {% highlight html %}
 <formgroup>
   <label for="checkbox1">
-    <input type="checkbox" id="checkbox1" checked> Checkbox input
+    <input type="checkbox" id="checkbox1" checked>
+    Checkbox input
   </label>
   <label for="checkbox2">
-    <input type="checkbox" id="checkbox2"> Checkbox input with a super long string of text that can wrap to a second line to show the hanging input.
+    <input type="checkbox" id="checkbox2">
+    Checkbox input with a super long string of text that can wrap to a second line to show the hanging input.
   </label>
 </formgroup>
 {% endhighlight %}
@@ -179,6 +187,7 @@ Contextual messages for warnings, errors, status confirmation, and the like.
 
 Contextual menus for buttons and more. Built with a custom `<dropdown>` element and several `<button>` elements as the dropdown actions.
 
+<div>
 <button type="button" id="dropdown-toggle" active>
   Dropdown button
 </button>
@@ -191,6 +200,7 @@ Contextual menus for buttons and more. Built with a custom `<dropdown>` element 
   <hr>
   <button type="button">Inspect Element</button>
 </dropdown>
+</div>
 
 {% highlight html %}
 <button type="button" id="dropdown-toggle" active>

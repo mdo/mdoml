@@ -66,11 +66,16 @@
 
 /* From GitHub Markdown styles */
 pre > code {
+  display: inline;
+  max-width: initial;
   padding: 0;
   margin: 0;
+  overflow: initial;
   font-size: 100%;
-  word-break: normal;
+  line-height: inherit;
   white-space: pre;
+  word-break: normal;
+  word-wrap: normal;
   background: transparent;
   border: 0;
 }
@@ -81,10 +86,9 @@ pre > code {
 
 .highlight pre,
 pre {
-  padding: $margin;
+  padding: 1rem;
   overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
+  font-size: 1rem;
   background-color: #f7f7f7;
   border-radius: .25rem;
 }
@@ -96,16 +100,4 @@ pre {
 
 pre {
   word-wrap: normal;
-}
-
-pre code {
-  display: inline;
-  max-width: initial;
-  padding: 0;
-  margin: 0;
-  overflow: initial;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: transparent;
-  border: 0;
 }
