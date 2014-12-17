@@ -6,7 +6,7 @@ kramdown:
   auto_ids: true
 
 permalink: pretty
-baseurl: /custom-elements
+baseurl: /mdoml
 
 github:
   repo: https://github.com/mdo/mdoml
