@@ -1,0 +1,289 @@
+/*
+ * Docs resets
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  padding: 2rem;
+  font: 16px/1.5 "Helvetica Neue";
+  color: #333;
+  background-color: #fff;
+}
+
+code {
+  padding: .1rem .25rem;
+  color: #555;
+  background-color: #f5f5f5;
+  border-radius: .2rem;
+}
+
+body {
+  max-width: 38rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+}
+
+h1, h2, h3 {
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+p > a {
+  color: rgba(0,0,255,.75);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,255,.25);
+}
+
+ul > li + li {
+  margin-top: .5rem;
+}
+
+hr {
+  margin: 2rem 0;
+  border: 0;
+  border-bottom: .0625rem solid #eee;
+}
+
+
+
+/*
+ * Reset buttons
+ */
+
+button {
+  position: relative;
+  padding: .25rem 1rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  background: none;
+  border: .0625rem solid #ddd;
+  border-radius: .25rem;
+  -webkit-appearance: none;
+}
+
+button:not(:disabled):hover,
+button:not(:disabled):focus,
+button:not(:disabled):active,
+button:not(:disabled)[active] {
+  color: #fff;
+  background-color: rgba(0,0,255,.65);
+  border-color: rgba(0,0,255,.65);
+}
+
+
+/*
+ * Form groups
+ */
+
+formgroup {
+  display: block;
+  padding-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+formgroup > label:after {
+  display: block;
+  content: "";
+  margin-bottom: .25rem;
+}
+
+formgroup > label > input[type="radio"],
+formgroup > label > input[type="checkbox"]{
+  margin-left: -1rem;
+  vertical-align: text-top;
+}
+
+
+
+/*
+ * Grid
+ */
+
+row {
+  display: block;
+  margin: 1rem -1rem;
+}
+
+/* Clearfix */
+row:before,
+row:after {
+  content: " ";
+  display: table;
+}
+row:after {
+  clear: both;
+}
+
+/* Columns */
+column {
+  position: relative;
+  float: left;
+  padding: .5rem 1rem;
+  background-color: rgba(255,0,0,.15);
+  border: .0625rem solid rgba(255,0,0,.15);
+}
+
+column[cols="2"] {
+  width: 16.666666%;
+}
+column[cols="3"] {
+  width: 25%;
+}
+column[cols="4"] {
+  width: 33.333333%;
+}
+column[cols="6"] {
+  width: 50%;
+}
+column[cols="8"] {
+  width: 66.666666%;
+}
+column[cols="9"] {
+  width: 75%;
+}
+column[cols="10"] {
+  width: 83.333333%;
+}
+
+
+
+/*
+ * Alerts
+ */
+
+alert {
+  display: block;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #fff;
+  border: .0625rem solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+}
+
+alert > p {
+  margin-bottom: 0;
+}
+
+alert[is="info"] {
+  background-color: rgba(0,0,255,.075);
+  border-color: rgba(0,0,255,.2);
+}
+
+alert[is="warning"] {
+  background-color: rgba(255,204,0,.15);
+}
+
+alert[is="danger"] {
+  background-color: rgba(255,0,0,.15);
+}
+
+
+
+/*
+ * Dropdowns
+ */
+
+dropdown {
+  display: block;
+  max-width: 14rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  border: .0625rem solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+  box-shadow: 0 .375rem .75rem rgba(0,0,0,.15);
+}
+
+dropdown > button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-radius: 0;
+}
+
+dropdown > button:not(:disabled):hover,
+dropdown > button:not(:disabled):focus,
+dropdown > button:not(:disabled):active {
+  color: #fff;
+  background-color: rgba(0,0,255,.65);
+}
+
+dropdown > hr {
+  margin: .25rem 0;
+}
+
+
+
+/*
+ * Combo buttons
+ */
+
+combo-button {
+  display: inline-block;
+}
+
+combo-button > button {
+  float: left;
+  border-radius: 0;
+}
+
+combo-button > button + button {
+  margin-left: -.0625rem;
+}
+
+combo-button > button:first-child {
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+}
+
+combo-button > button:last-child {
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+}
+
+combo-button > button:not(:disabled):hover,
+combo-button > button:not(:disabled):focus,
+combo-button > button:not(:disabled):active {
+  z-index: 1;
+}
+
+
+
+/*
+ * Breadcrumb
+ */
+
+breadcrumb {
+  display: block;
+  margin: 1rem 0;
+}
+
+breadcrumb > a {
+  display: inline-block;
+}
+
+breadcrumb > a + a:before {
+  display: inline-block;
+  padding-right: .25rem;
+  padding-left: .5rem;
+  color: #ccc;
+  content: "/ \00a0";
+}
+
+breadcrumb > a:last-child {
+  color: #333;
+  text-decoration: none;
+}
+
