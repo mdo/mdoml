@@ -61,6 +61,10 @@ Uses a custom `<formgroup>` element to contain, position, and align checkboxes a
   </label>
 </formgroup>
 
+```html
+<p>test</p>
+```
+
 ---
 
 ## Grids
