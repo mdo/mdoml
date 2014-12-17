@@ -4,6 +4,7 @@ highlighter: rouge
 
 kramdown:
   auto_ids: true
+  input: GFM
 
 permalink: pretty
 source: docs
