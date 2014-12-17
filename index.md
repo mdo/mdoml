@@ -174,11 +174,8 @@ Contextual messages for warnings, errors, status confirmation, and the like.
 
 {% highlight html %}
 <alert>...</alert>
-
 <alert is="info">...</alert>
-
 <alert is="warning">...</alert>
-
 <alert is="danger">...</alert>
 {% endhighlight %}
 
@@ -188,6 +185,7 @@ Contextual messages for warnings, errors, status confirmation, and the like.
 
 Contextual menus for buttons and more. Built with a custom `<dropdown>` element and several `<button>` elements as the dropdown actions.
 
+<div>
 <button type="button" id="dropdown-toggle" active>
   Dropdown button
 </button>
@@ -200,6 +198,7 @@ Contextual menus for buttons and more. Built with a custom `<dropdown>` element 
   <hr>
   <button type="button">Inspect Element</button>
 </dropdown>
+</div>
 
 {% highlight html %}
 <button type="button" id="dropdown-toggle" active>
@@ -253,6 +252,13 @@ Attach multiple buttons together when their actions relate to one another.
 ## Breadcrumb
 
 Show the current path to a particular page with breadcrumb navigation.
+
+<breadcrumb>
+  <a href="#">Home</a>
+  <a href="#">Subfolder</a>
+  <a href="#">Subfolder</a>
+  <a href="#">Page</a>
+</breadcrumb>
 
 {% highlight html %}
 <breadcrumb>
