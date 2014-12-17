@@ -12,3 +12,6 @@ github:
   repo: https://github.com/mdo/mdoml
 
 safe: true
+
+sass:
+  style: compressed

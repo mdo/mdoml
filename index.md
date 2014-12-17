@@ -1,9 +1,13 @@
 ---
 layout: default
-title: Custom elements
 ---
 
-# Custom elements
+# mdoml
+
+What if you could augment HTML5's current set of elements with your own? Well, as it turns out, you can.
+
+**mdoml**, or mdo markup language, is an experiment to augment HTML5's language with additional custom elements from some of interface design's most common patterns. It attempts to answer the question, *What if could HTML as a language look like if it had support for our most beloved components?*
+
 
 Create common design components with custom HTML elements instead of the (stereo)typical `<div>`-itis we often run into.
 
