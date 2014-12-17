@@ -52,6 +52,17 @@ Uses a custom `<formgroup>` element to contain, position, and align checkboxes a
   </label>
 </formgroup>
 
+``` html
+<formgroup>
+  <label for="radio1">
+    <input type="radio" id="radio1" name="radios" checked> Radio input
+  </label>
+  <label for="radio2">
+    <input type="radio" id="radio2" name="radios"> Another radio input
+  </label>
+</formgroup>
+```
+
 <formgroup>
   <label for="checkbox1">
     <input type="checkbox" id="checkbox1" checked> Checkbox input
@@ -62,7 +73,14 @@ Uses a custom `<formgroup>` element to contain, position, and align checkboxes a
 </formgroup>
 
 ``` html
-<p>test</p>
+<formgroup>
+  <label for="checkbox1">
+    <input type="checkbox" id="checkbox1" checked> Checkbox input
+  </label>
+  <label for="checkbox2">
+    <input type="checkbox" id="checkbox2"> Checkbox input with a super long string of text that can wrap to a second line to show the hanging input.
+  </label>
+</formgroup>
 ```
 
 ---
