@@ -10,3 +10,5 @@ baseurl: /custom-elements
 
 github:
   repo: https://github.com/mdo/mdoml
+
+safe: true
