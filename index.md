@@ -61,7 +61,7 @@ Uses a custom `<formgroup>` element to contain, position, and align checkboxes a
   </label>
 </formgroup>
 
-```html
+``` html
 <p>test</p>
 ```
 
