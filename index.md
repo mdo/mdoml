@@ -52,7 +52,7 @@ Uses a custom `<formgroup>` element to contain, position, and align checkboxes a
   </label>
 </formgroup>
 
-``` html
+{% highlight html %}
 <formgroup>
   <label for="radio1">
     <input type="radio" id="radio1" name="radios" checked> Radio input
@@ -61,7 +61,7 @@ Uses a custom `<formgroup>` element to contain, position, and align checkboxes a
     <input type="radio" id="radio2" name="radios"> Another radio input
   </label>
 </formgroup>
-```
+{% endhighlight %}
 
 <formgroup>
   <label for="checkbox1">
@@ -72,7 +72,7 @@ Uses a custom `<formgroup>` element to contain, position, and align checkboxes a
   </label>
 </formgroup>
 
-``` html
+{% highlight html %}
 <formgroup>
   <label for="checkbox1">
     <input type="checkbox" id="checkbox1" checked> Checkbox input
@@ -81,7 +81,7 @@ Uses a custom `<formgroup>` element to contain, position, and align checkboxes a
     <input type="checkbox" id="checkbox2"> Checkbox input with a super long string of text that can wrap to a second line to show the hanging input.
   </label>
 </formgroup>
-```
+{% endhighlight %}
 
 ---
 
@@ -133,6 +133,14 @@ Note that not all possible column combinations are used here. I've purposely avo
   <column cols="2">2</column>
 </row>
 
+{% highlight html %}
+<row>
+  <column cols="4">4</column>
+  <column cols="4">4</column>
+  <column cols="4">4</column>
+</row>
+{% endhighlight %}
+
 ---
 
 ## Alerts
@@ -155,6 +163,16 @@ Contextual messages for warnings, errors, status confirmation, and the like.
   <p>This is an alert with some text in it.</p>
 </alert>
 
+{% highlight html %}
+<alert>...</alert>
+
+<alert is="info">...</alert>
+
+<alert is="warning">...</alert>
+
+<alert is="danger">...</alert>
+{% endhighlight %}
+
 ---
 
 ## Dropdowns
@@ -174,6 +192,21 @@ Contextual menus for buttons and more. Built with a custom `<dropdown>` element 
   <button type="button">Inspect Element</button>
 </dropdown>
 
+{% highlight html %}
+<button type="button" id="dropdown-toggle" active>
+  Dropdown button
+</button>
+<dropdown role="menu" aria-labelledby="dropdown-toggle">
+  <button type="button" disabled>Cut</button>
+  <button type="button" disabled>Copy</button>
+  <button type="button">Paste</button>
+  <hr>
+  <button type="button">Spelling and Grammar...</button>
+  <hr>
+  <button type="button">Inspect Element</button>
+</dropdown>
+{% endhighlight %}
+
 ---
 
 ## Combo buttons
@@ -185,11 +218,26 @@ Attach multiple buttons together when their actions relate to one another.
   <button type="button">Button</button>
 </combo-button>
 
+{% highlight html %}
+<combo-button role="group" aria-label="Combo button">
+  <button type="button">Button</button>
+  <button type="button">Button</button>
+</combo-button>
+{% endhighlight %}
+
 <combo-button role="group" aria-label="Combo button with disabled button">
   <button type="button" disabled>Disabled</button>
   <button type="button">Button</button>
   <button type="button" active>Active</button>
 </combo-button>
+
+{% highlight html %}
+<combo-button role="group" aria-label="Combo button with disabled button">
+  <button type="button" disabled>Disabled</button>
+  <button type="button">Button</button>
+  <button type="button" active>Active</button>
+</combo-button>
+{% endhighlight %}
 
 ---
 
@@ -197,12 +245,14 @@ Attach multiple buttons together when their actions relate to one another.
 
 Show the current path to a particular page with breadcrumb navigation.
 
+{% highlight html %}
 <breadcrumb>
   <a href="#">Home</a>
   <a href="#">Subfolder</a>
   <a href="#">Subfolder</a>
   <a href="#">Page</a>
 </breadcrumb>
+{% endhighlight %}
 
 ---
 
