@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Custom elements
 
 Create common design components with custom HTML elements instead of the (stereo)typical `<div>`-itis we often run into.
