@@ -283,7 +283,7 @@ Use the custom `<breadcrumb>` element to show the current path to a particular p
   <a href="#">Home</a>
   <a href="#">Subfolder</a>
   <a href="#">Subfolder</a>
-  <a href="#">Page</a>
+  <a>Page</a>
 </breadcrumb>
 
 {% highlight html %}
@@ -291,7 +291,7 @@ Use the custom `<breadcrumb>` element to show the current path to a particular p
   <a href="#">Home</a>
   <a href="#">Subfolder</a>
   <a href="#">Subfolder</a>
-  <a href="#">Page</a>
+  <a>Page</a>
 </breadcrumb>
 {% endhighlight %}
 
