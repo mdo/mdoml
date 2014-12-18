@@ -24,6 +24,7 @@ Learn more, suggest changes, or report bugs via [the GitHub repo](https://github
 * By design, custom HTML elements have no assumed semantics. For example, you gain obvious browser-backed advantages by using a `<form>` over a `<custom-form>` element. **Don't replace semantic elements.**
 * Because of that lack of browser-assumed semantics, theoretically there's no disadvantage with custom elements for many components. Instead of a `<div>` for dropdowns, `<dropdown>`s could be used with no discernible impact to accessibility.
 * **Custom elements are inline by default.** If you need a block-level element, you'll need to specify that in the CSS.
+* This aims to use HTML elements and attributes wherever possible. Classes, IDs, and more are purposefully avoided.
 * Accessibility-wise, you'll still need to include ARIA roles where appropriate. I've attempted to do so in a few of the examples below.
 
 ---

@@ -13,15 +13,17 @@ button {
   border: .0625rem solid #ccc;
   border-radius: .25rem;
   -webkit-appearance: none;
-}
 
-button:not(:disabled):hover,
-button:not(:disabled):focus,
-button:not(:disabled):active,
-button:not(:disabled)[active] {
-  color: #fff;
-  background-color: rgba(0,0,255,.65);
-  border-color: rgba(0,0,255,.65);
+  &:not(:disabled) {
+    &:hover,
+    &:focus,
+    &:active,
+    &[active] {
+      color: #fff;
+      background-color: rgba(0,0,255,.65);
+      border-color: rgba(0,0,255,.65);
+    }
+  }
 }
 
 
@@ -62,18 +64,21 @@ formgroup {
   padding-left: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
 
-formgroup > label:after {
-  display: block;
-  content: "";
-  margin-bottom: .25rem;
-}
+  > label {
+    // Force them to be stacked without declaring `display: block`
+    &:after {
+      display: block;
+      content: "";
+      margin-bottom: .25rem;
+    }
 
-formgroup > label > input[type="radio"],
-formgroup > label > input[type="checkbox"]{
-  margin-left: -1rem;
-  vertical-align: text-top;
+    > input[type="radio"],
+    > input[type="checkbox"] {
+      margin-left: -1rem;
+      vertical-align: text-top;
+    }
+  }
 }
 
 
@@ -84,16 +89,16 @@ formgroup > label > input[type="checkbox"]{
 row {
   display: block;
   margin: 1rem -1rem;
-}
 
-// Clearfix
-row:before,
-row:after {
-  content: " ";
-  display: table;
-}
-row:after {
-  clear: both;
+  // Clearfix
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
 }
 
 // Columns
@@ -103,28 +108,14 @@ column {
   padding: .5rem 1rem;
   background-color: rgba(255,0,0,.15);
   border: .0625rem solid rgba(255,0,0,.15);
-}
 
-column[cols="2"] {
-  width: 16.666666%;
-}
-column[cols="3"] {
-  width: 25%;
-}
-column[cols="4"] {
-  width: 33.333333%;
-}
-column[cols="6"] {
-  width: 50%;
-}
-column[cols="8"] {
-  width: 66.666666%;
-}
-column[cols="9"] {
-  width: 75%;
-}
-column[cols="10"] {
-  width: 83.333333%;
+  &[cols="2"]  { width: 16.666666%; }
+  &[cols="3"]  { width: 25%; }
+  &[cols="4"]  { width: 33.333333%; }
+  &[cols="6"]  { width: 50%; }
+  &[cols="8"]  { width: 66.666666%; }
+  &[cols="9"]  { width: 75%; }
+  &[cols="10"] { width: 83.333333%; }
 }
 
 
@@ -140,29 +131,28 @@ alert {
   background-color: #fff;
   border: .0625rem solid rgba(0,0,0,.15);
   border-radius: .25rem;
-}
 
-alert > p {
-  margin-bottom: 0;
-}
+  > p {
+    margin-bottom: 0;
+  }
 
-alert[is="info"] {
-  background-color: rgba(0,0,255,.075);
-  border-color: rgba(0,0,255,.2);
-}
+  &[is="info"] {
+    background-color: rgba(0,0,255,.075);
+    border-color: rgba(0,0,255,.2);
+  }
 
-alert[is="warning"] {
-  background-color: rgba(255,204,0,.15);
-}
+  &[is="warning"] {
+    background-color: rgba(255,204,0,.15);
+  }
 
-alert[is="danger"] {
-  background-color: rgba(255,0,0,.15);
-}
+  &[is="danger"] {
+    background-color: rgba(255,0,0,.15);
+  }
 
-alert[is="dismissable"] {
-  padding-right: 2rem;
+  &[is="dismissable"] {
+    padding-right: 2rem;
+  }
 }
-
 
 
 //
@@ -178,30 +168,32 @@ dropdown {
   border: .0625rem solid rgba(0,0,0,.2);
   border-radius: .25rem;
   box-shadow: 0 .15rem .5rem rgba(0,0,0,.1);
-}
 
-dropdown > button {
-  display: block;
-  width: 100%;
-  text-align: left;
-  border: 0;
-  border-radius: 0;
-}
+  > button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: 0;
+    border-radius: 0;
 
-dropdown > button:not(:disabled):hover,
-dropdown > button:not(:disabled):focus,
-dropdown > button:not(:disabled):active {
-  color: #fff;
-  background-color: rgba(0,0,255,.65);
-}
+    &:not(:disabled) {
+      &:hover,
+      &:focus,
+      &:active {
+        color: #fff;
+        background-color: rgba(0,0,255,.65);
+      }
+    }
+  }
 
-dropdown > hr {
-  margin: .25rem 0;
-}
+  > hr {
+    margin: .25rem 0;
+  }
 
-dropdown > form {
-  padding-right: .25rem;
-  padding-left: .25rem;
+  > form {
+    padding-right: .25rem;
+    padding-left: .25rem;
+  }
 }
 
 
@@ -211,31 +203,33 @@ dropdown > form {
 
 combo-button {
   display: inline-block;
-}
 
-combo-button > button {
-  float: left;
-  border-radius: 0;
-}
+  > button {
+    float: left;
+    border-radius: 0;
 
-combo-button > button + button {
-  margin-left: -.0625rem;
-}
+    + button {
+      margin-left: -.0625rem;
+    }
 
-combo-button > button:first-child {
-  border-top-left-radius: .25rem;
-  border-bottom-left-radius: .25rem;
-}
+    &:first-child {
+      border-top-left-radius: .25rem;
+      border-bottom-left-radius: .25rem;
+    }
 
-combo-button > button:last-child {
-  border-top-right-radius: .25rem;
-  border-bottom-right-radius: .25rem;
-}
+    &:last-child {
+      border-top-right-radius: .25rem;
+      border-bottom-right-radius: .25rem;
+    }
 
-combo-button > button:not(:disabled):hover,
-combo-button > button:not(:disabled):focus,
-combo-button > button:not(:disabled):active {
-  z-index: 1;
+    &:not(:disabled) {
+      &:hover,
+      &:focus,
+      &:active {
+        z-index: 1;
+      }
+    }
+  }
 }
 
 
@@ -246,21 +240,21 @@ combo-button > button:not(:disabled):active {
 breadcrumb {
   display: block;
   margin: 1rem 0;
-}
 
-breadcrumb > a {
-  display: inline-block;
-}
+  > a {
+    display: inline-block;
 
-breadcrumb > a + a:before {
-  display: inline-block;
-  padding-right: .25rem;
-  padding-left: .5rem;
-  color: #ccc;
-  content: "/ \00a0";
-}
+    + a:before {
+      display: inline-block;
+      padding-right: .25rem;
+      padding-left: .5rem;
+      color: #ccc;
+      content: "/ \00a0";
+    }
 
-breadcrumb > a:last-child {
-  color: #333;
-  text-decoration: none;
+    &:last-child {
+      color: #333;
+      text-decoration: none;
+    }
+  }
 }
