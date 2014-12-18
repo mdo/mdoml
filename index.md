@@ -175,10 +175,10 @@ Use custom `<alert>`s as messages for warnings, errors, status confirmation, and
 Contextual menus for buttons and more. Built with a custom `<dropdown>` element and several `<button>` elements as the dropdown actions. Using `<button>`s gives us incredibly ease of use for disabled, hover, and active states.
 
 <div>
-<button type="button" id="dropdown-toggle" active>
+<button type="button" id="dropdown-toggle1" active>
   Dropdown button
 </button>
-<dropdown role="menu" aria-labelledby="dropdown-toggle">
+<dropdown role="menu" aria-labelledby="dropdown-toggle1">
   <button type="button" disabled>Cut</button>
   <button type="button" disabled>Copy</button>
   <button type="button">Paste</button>
@@ -207,10 +207,10 @@ Contextual menus for buttons and more. Built with a custom `<dropdown>` element 
 The contents of a `<dropdown>` could also be customized to include things other than pure `<button>` actions:
 
 <div>
-<button type="button" id="dropdown-toggle" active>
+<button type="button" id="dropdown-toggle2" active>
   Dropdown button
 </button>
-<dropdown role="menu" aria-labelledby="dropdown-toggle">
+<dropdown role="menu" aria-labelledby="dropdown-toggle2">
   <form>
     <input type="text" placeholder="Search">
   </form>
