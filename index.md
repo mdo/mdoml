@@ -2,13 +2,18 @@
 layout: default
 ---
 
-# mdoml
-
 What if you could augment HTML5's current set of elements with your own? Well, as it turns out, you can. **mdoml** is an experiment in creating custom HTML elements based on today's most common interface design components.
 
 Is this a bad idea? Maybe, but that depends on how you look at it. Sure, it doesn't validate, but it does create a more approachable compontentized design system. No more rules around writing classes a certain way—just create the components.
 
 Learn more, suggest changes, or report bugs via [the GitHub repo](https://github.com/mdo/mdoml).
+
+---
+
+## Contents
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
 
 ---
 
@@ -209,27 +214,31 @@ The contents of a `<dropdown>` could also be customized to include things other 
     <input type="text" placeholder="Search">
   </form>
   <hr>
-  <button type="button">Spelling and Grammar...</button>
+  <button type="button">United States of America</button>
+  <button type="button">United Kingdom</button>
   <hr>
-  <button type="button">Inspect Element</button>
+  <button type="button">Canada</button>
+  <button type="button">France</button>
+  <button type="button">India</button>
+  <button type="button">Mexico</button>
 </dropdown>
 </div>
 
 {% highlight html %}
-<button type="button" id="dropdown-toggle" active>
-  Dropdown button
-</button>
 <dropdown role="menu" aria-labelledby="dropdown-toggle">
-  <button type="button" disabled>Cut</button>
-  <button type="button" disabled>Copy</button>
-  <button type="button">Paste</button>
+  <form>
+    <input type="text" placeholder="Search">
+  </form>
   <hr>
-  <button type="button">Spelling and Grammar...</button>
+  <button type="button">United States of America</button>
+  <button type="button">United Kingdom</button>
   <hr>
-  <button type="button">Inspect Element</button>
+  <button type="button">Canada</button>
+  <button type="button">France</button>
+  <button type="button">India</button>
+  <button type="button">Mexico</button>
 </dropdown>
 {% endhighlight %}
-
 
 ---
 
@@ -291,5 +300,5 @@ Use the custom `<breadcrumb>` element to show the current path to a particular p
 
 Yes, but beyond that I'm not sure where to take something like this. I'm super intrigued and I could totally see myself building things this way in the future. Something about it feels right. Performance is probably a concern though, at least compared to a pure class-driven system (e.g., `.dropdown` over `<dropdown>`).
 
-My ultimate goal for things like this—and popular front-end frameworks—is that these kind of ideas could influence the future changes to the HTML and CSS specs.
+My ultimate goal for things like this—and popular front-end frameworks—is that these kind of ideas could influence the future changes to the HTML and CSS specs. That sounds a bit lofty, but one never knows.
 

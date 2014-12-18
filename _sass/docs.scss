@@ -1,6 +1,6 @@
-/*
- * Docs resets
- */
+//
+// Docs assets
+//
 
 * {
   box-sizing: border-box;
@@ -68,9 +68,9 @@ hr {
 }
 
 
-/*
- * From GitHub Markdown styles
- */
+//
+// From GitHub Markdown styles
+//
 
 pre > code {
   display: inline;
@@ -107,4 +107,14 @@ pre {
 
 pre {
   word-wrap: normal;
+}
+
+
+//
+// Markdown generated ToC
+//
+
+// Hide the first child li because it's always going to be "Contents".
+#markdown-toc > li:first-child {
+  display: none;
 }
