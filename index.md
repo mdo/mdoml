@@ -198,6 +198,39 @@ Contextual menus for buttons and more. Built with a custom `<dropdown>` element 
 </dropdown>
 {% endhighlight %}
 
+The contents of a `<dropdown>` could also be customized to include things other than pure `<button>` actions:
+
+<div>
+<button type="button" id="dropdown-toggle" active>
+  Dropdown button
+</button>
+<dropdown role="menu" aria-labelledby="dropdown-toggle">
+  <form>
+    <input type="text" placeholder="Search">
+  </form>
+  <hr>
+  <button type="button">Spelling and Grammar...</button>
+  <hr>
+  <button type="button">Inspect Element</button>
+</dropdown>
+</div>
+
+{% highlight html %}
+<button type="button" id="dropdown-toggle" active>
+  Dropdown button
+</button>
+<dropdown role="menu" aria-labelledby="dropdown-toggle">
+  <button type="button" disabled>Cut</button>
+  <button type="button" disabled>Copy</button>
+  <button type="button">Paste</button>
+  <hr>
+  <button type="button">Spelling and Grammar...</button>
+  <hr>
+  <button type="button">Inspect Element</button>
+</dropdown>
+{% endhighlight %}
+
+
 ---
 
 ## Combo buttons
