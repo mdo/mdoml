@@ -145,27 +145,27 @@ Uses custom `<row>`s and `<column>`s to create a basic grid layout. Columns are 
 
 Use custom `<alert>`s as messages for warnings, errors, status confirmation, and the like.
 
-<alert>
+<alert role="alert">
   <p>This is an alert with some text in it.</p>
 </alert>
 
-<alert is="info">
+<alert is="info" role="alert">
   <p>This is an alert with some text in it.</p>
 </alert>
 
-<alert is="warning">
+<alert is="warning" role="alert">
   <p>This is an alert with some text in it.</p>
 </alert>
 
-<alert is="danger">
+<alert is="danger" role="alert">
   <p>This is an alert with some text in it.</p>
 </alert>
 
 {% highlight html %}
-<alert>...</alert>
-<alert is="info">...</alert>
-<alert is="warning">...</alert>
-<alert is="danger">...</alert>
+<alert role="alert">...</alert>
+<alert is="info" role="alert">...</alert>
+<alert is="warning" role="alert">...</alert>
+<alert is="danger" role="alert">...</alert>
 {% endhighlight %}
 
 ---
