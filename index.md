@@ -277,7 +277,7 @@ Use a custom `<combo-button>` to tether a series of related buttons. This relies
 
 ## Breadcrumb
 
-Use the custom `<breadcrumb>` element to show the current path to a particular page. Structurally, it's quite familiar to `<nav>` elements. Theoretically, it's contents could be generated based on the page's URL structure or something similar.
+Use the custom `<breadcrumb>` element to show the current path to a particular page. Structurally, it's quite familiar to `<nav>` elements. Theoretically, its contents could be generated based on the page's URL structure or something similar.
 
 <breadcrumb>
   <a href="#">Home</a>
@@ -302,4 +302,3 @@ Use the custom `<breadcrumb>` element to show the current path to a particular p
 Yes, but beyond that I'm not sure where to take something like this. I'm super intrigued and I could totally see myself building things this way in the future. Something about it feels right. Performance is probably a concern though, at least compared to a pure class-driven system (e.g., `.dropdown` over `<dropdown>`).
 
 My ultimate goal for things like this—and popular front-end frameworks—is that these kind of ideas could influence the future changes to the HTML and CSS specs. That sounds a bit lofty, but one never knows.
-
