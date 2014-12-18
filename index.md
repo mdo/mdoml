@@ -4,7 +4,7 @@ layout: default
 
 What if you could augment HTML5's current set of elements with your own? Well, as it turns out, you can. **mdoml** is an experiment in creating custom HTML elements based on today's most common interface design components.
 
-Is this a bad idea? Maybe, but that depends on how you look at it. Sure, it doesn't validate, but it does create a more approachable compontentized design system. No more rules around writing classes a certain way—just create the components.
+Is this a bad idea? Maybe, but that depends on how you look at it. Sure, it doesn't validate, but it does create a more approachable component-based design system. No more rules around writing classes a certain way—just create the components.
 
 Learn more, suggest changes, or report bugs via [the GitHub repo](https://github.com/mdo/mdoml).
 
@@ -22,7 +22,7 @@ Learn more, suggest changes, or report bugs via [the GitHub repo](https://github
 * This isn't about Web Components. This is specifically about writing non-compliant, custom HTML tags as a shorthand.
 * This is for all modern browsers, and IE9+. **IE8 and below need help initializing custom HTML elements.** [Consider using the HTML5 shiv.](https://github.com/aFarkas/html5shiv)
 * By design, custom HTML elements have no assumed semantics. For example, you gain obvious browser-backed advantages by using a `<form>` over a `<custom-form>` element. **Don't replace semantic elements.**
-* Because of that lack of browser-assumed semantics, theoretically there's no disadvantage with custom elements for many components. Instead of a `<div>` for dropdowns, `<dropdown>`s could be used with no discernable impact to accessibility.
+* Because of that lack of browser-assumed semantics, theoretically there's no disadvantage with custom elements for many components. Instead of a `<div>` for dropdowns, `<dropdown>`s could be used with no discernible impact to accessibility.
 * **Custom elements are inline by default.** If you need a block-level element, you'll need to specify that in the CSS.
 * Accessibility-wise, you'll still need to include ARIA roles where appropriate. I've attempted to do so in a few of the examples below.
 
