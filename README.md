@@ -1,6 +1,8 @@
 # mdoml
 
-**mdoml**, or mdo markup language, is an experiment to augment HTML5's language with additional custom elements from some of interface design's most common patterns. It attempts to answer the question, *What if could HTML as a language look like if it had support for our most beloved components?*
+What if you could augment HTML5's current set of elements with your own? Well, as it turns out, you can. **mdoml** is an experiment in creating custom HTML elements based on today's most common interface design components.
+
+Is this a bad idea? Maybe, but that depends on how you look at it. Sure, it doesn't validate, but it does create a more approachable component-based design system. No more rules around writing classes a certain way—just create the components.
 
 For more information, [see the docs and examples](http://mdo.github.io/mdoml).
 
